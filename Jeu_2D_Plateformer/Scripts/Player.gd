@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
-
+func _ready():
+	add_to_group("player")
+	
 const SPEED = 200.0
 const JUMP_VELOCITY = -350.0
 
@@ -48,4 +50,4 @@ func _on_exite_to_zone_2_body_entered(body: Node2D) -> void:
 		container.add_child(new_zone)
 		
 		# Placer le joueur
-		body.global_position = Vector2(64, 128)  # ou ta spawn_position
+		body.global_position = Vector2(0, -50)  # ou ta spawn_position
