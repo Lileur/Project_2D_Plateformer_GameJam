@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://b3h2vl22yo1ml" path="res://Scripts/plateforme_2.gd" id="6_3f3gj"]
 [ext_resource type="Texture2D" uid="uid://cv258wtmleman" path="res://Assets/shadow_tileset.png" id="6_nk20v"]
 [ext_resource type="Texture2D" uid="uid://p8v3iityb7ha" path="res://Assets/plateform.png" id="7_83tt4"]
-[ext_resource type="PackedScene" uid="uid://xs4krmiiiv2m" path="res://Scenes/2_nd_zone.tscn" id="7_t1gcj"]
 [ext_resource type="Script" uid="uid://emb7lom3hv1y" path="res://Scripts/exite_to_zone_2.gd" id="10_8ubub"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v66wy"]
@@ -160,7 +159,7 @@ position_smoothing_enabled = true
 sprite_frames = SubResource("SpriteFrames_i8mhw")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.66984534
+frame_progress = 0.4166477
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/CharacterBody2D" unique_id=1941841184]
 position = Vector2(2, 2)
@@ -178,7 +177,6 @@ layer_0/tile_data = PackedInt32Array(65534, 65538, 0, 65535, 65538, 0, 0, 65538,
 [node name="Exite_to_zone_2" type="Area2D" parent="ZoneContainer/1st_zone" unique_id=1506272676]
 position = Vector2(288, -174)
 script = ExtResource("10_8ubub")
-target_zone = ExtResource("7_t1gcj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneContainer/1st_zone/Exite_to_zone_2" unique_id=15746667]
 position = Vector2(-24, 3)
