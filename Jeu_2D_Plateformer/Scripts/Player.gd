@@ -13,6 +13,12 @@ var can_double_jump := false
 var jump_count := 0
 var max_jumps := 1
 
+func unlock_double_jump():
+	can_double_jump = true
+	max_jumps = 2
+
+
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if is_on_floor():
@@ -37,23 +43,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
-
-func _on_exite_to_zone_2_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		var main = get_tree().current_scene
-		var container = main.get_node("ZoneContainer")
-		
-		# Supprimer la zone actuelle
-		for child in container.get_children():
-			child.queue_free()
-			
-		# Charger la nouvelle zone
-		var new_zone = preload("res://Scenes/2_nd_zone.tscn").instantiate() 
-		container.add_child(new_zone)
-		
-		# Placer le joueur
-		body.global_position = Vector2(0, -50)  # ou ta spawn_position
 
 func die():
 	timer.start

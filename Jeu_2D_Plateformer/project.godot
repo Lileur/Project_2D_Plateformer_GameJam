@@ -14,6 +14,10 @@ config/name="Jeu_2D_Plateformer"
 run/main_scene="uid://clxh23kcrtn8w"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+ZoneManager="*uid://d0m6bqh6oy1dv"
+
 [input]
 
 jump={
