@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
+@onready var timer = $Timer
+
 func _ready():
 	add_to_group("player")
+	
 	
 const SPEED = 200.0
 const JUMP_VELOCITY = -350.0
@@ -51,3 +54,10 @@ func _on_exite_to_zone_2_body_entered(body: Node2D) -> void:
 		
 		# Placer le joueur
 		body.global_position = Vector2(0, -50)  # ou ta spawn_position
+
+func die():
+	timer.start
+	Engine.time_scale = 0.5
+	global_position = Vector2(0, -32)  # point de respawn
+	Engine.time_scale = 1
+	
