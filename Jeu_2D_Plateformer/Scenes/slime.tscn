@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cg34quvuqwpg" path="res://Scripts/slime.gd" id="1_swwnm"]
 [ext_resource type="Texture2D" uid="uid://cywqfs1coy61u" path="res://Assets/slime.png" id="2_aiwxb"]
+[ext_resource type="Texture2D" uid="uid://debqg2yey8p26" path="res://Assets/slime_v2_mouvement.png" id="3_aiwxb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_paq7w"]
 atlas = ExtResource("2_aiwxb")
@@ -52,60 +53,40 @@ atlas = ExtResource("2_aiwxb")
 region = Rect2(352, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10642"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(0, 64, 32, 32)
+atlas = ExtResource("3_aiwxb")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uu7bc"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(32, 64, 32, 32)
+atlas = ExtResource("3_aiwxb")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gqvs5"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(96, 64, 32, 32)
+atlas = ExtResource("3_aiwxb")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2bbhk"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(160, 64, 32, 32)
+atlas = ExtResource("3_aiwxb")
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d6mpm"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(0, 64, 32, 32)
+atlas = ExtResource("3_aiwxb")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8ucs"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(32, 64, 32, 32)
+atlas = ExtResource("3_aiwxb")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fk1yg"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(64, 64, 32, 32)
+atlas = ExtResource("3_aiwxb")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3myv"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(96, 64, 32, 32)
+atlas = ExtResource("3_aiwxb")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_px1jo"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(128, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xfmve"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(160, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vmhrb"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(192, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gqtr1"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(224, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e5ros"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(256, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c37lc"]
-atlas = ExtResource("2_aiwxb")
-region = Rect2(288, 64, 32, 32)
+atlas = ExtResource("3_aiwxb")
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ebmqo"]
 animations = [{
@@ -182,21 +163,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_px1jo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xfmve")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vmhrb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gqtr1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e5ros")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c37lc")
 }],
 "loop": true,
 "name": &"move",
@@ -207,33 +173,35 @@ animations = [{
 radius = 5.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_swwnm"]
-radius = 6.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swwnm"]
-size = Vector2(166, 50)
+size = Vector2(166, 59)
 
 [node name="Slime" type="CharacterBody2D" unique_id=1844980943]
 script = ExtResource("1_swwnm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1305909203]
+position = Vector2(-1.4305115e-06, -8.000001)
+scale = Vector2(1.4999999, 1.4999999)
 sprite_frames = SubResource("SpriteFrames_ebmqo")
 animation = &"idle"
-frame_progress = 0.72523296
+frame_progress = 0.52034706
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1519007665]
 position = Vector2(1, 12)
 shape = SubResource("CircleShape2D_0xjjl")
 
 [node name="HitBox" type="Area2D" parent="." unique_id=1380273435]
+position = Vector2(-1, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=196821739]
-position = Vector2(1, 12)
+position = Vector2(1, 14)
 shape = SubResource("CircleShape2D_swwnm")
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1551837]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1454320871]
-position = Vector2(-1, -5)
+position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_swwnm")
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

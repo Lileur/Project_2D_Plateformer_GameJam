@@ -13,8 +13,7 @@ func _apply_camera_limits():
 	var camera = player.get_node("Camera2D")
 	
 	camera.make_current()
-	
-	
+			
 	camera.limit_left   = int(top_left.global_position.x)
 	camera.limit_top    = int(top_left.global_position.y)
 	camera.limit_right  = int(bottom_right.global_position.x)

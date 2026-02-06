@@ -5,4 +5,4 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		ZoneManager.change_zone("res://Scenes/Scenes.tscn", Vector2(32, -50))
+		ZoneManager.change_zone("res://Scenes/1_st_zone.tscn", Vector2(32, -50))
