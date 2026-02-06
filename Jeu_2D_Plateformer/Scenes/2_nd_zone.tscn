@@ -12,8 +12,8 @@
 [ext_resource type="Script" uid="uid://8wprrbc7wrwe" path="res://Scripts/Plateforme_HB.gd" id="9_n2bpx"]
 [ext_resource type="Script" uid="uid://uo87wi5vglmh" path="res://Scripts/dbj_scroll.gd" id="9_n2pfd"]
 [ext_resource type="Texture2D" uid="uid://c8j1pn0vnniqp" path="res://Assets/scroll.png" id="10_u2jlu"]
-[ext_resource type="Script" uid="uid://b725ae4j0lc8c" path="res://Scripts/exite_to_zone_1.gd" id="11_3x42k"]
-[ext_resource type="Script" uid="uid://borus317mw3d8" path="res://Scripts/exite_to_zone_3.gd" id="11_u2jlu"]
+[ext_resource type="Script" path="res://Scripts/exite_to_zone_1.gd" id="11_3x42k"]
+[ext_resource type="Script" path="res://Scripts/exite_to_zone_3.gd" id="11_u2jlu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyb7h"]
 texture = ExtResource("1_b577n")
