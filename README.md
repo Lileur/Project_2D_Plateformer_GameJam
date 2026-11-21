@@ -16,7 +16,7 @@ Incarne un **chevalier** qui traverse quatre zones remplies de pièges et de mon
 - **Pics** mortels
 - Caméra qui suit le joueur et reste dans les limites de chaque zone
 - Mort et réapparition au point de départ
-– capacité de sauter même au-dessus du vide (mécanique particulière et distinctive du jeu)
+- Capacité de sauter même au-dessus du vide (mécanique particulière et distinctive du jeu)
 
 ## Contrôles
 
